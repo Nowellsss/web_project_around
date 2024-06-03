@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+  <html lang="pt">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta
+      name="description"
+      content="Compartilhe todos os momentos maravilhosos que passou a explorar os Estados Unidos"
+      />
+      <meta name="author" content="Jorge Mendes" />
+      <meta name="keywords" content="Around The U.S." />
+      <title>Around The U.S.</title>
+      <link rel="shortcut icon" href="favicon.ico" />
+      <link rel="stylesheet" href="./pages/index.css" />
+      <link rel="preconnect" href="https://rsms.me/">
+      <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    </head>
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/around-the-us.png"
+          alt="Logo Around The U.S. "
+          class="header__logo"
+        />
+      </header>
+      <main class="content">
+        <section class="profile">
+          <img
+            src="./images/avatar.png"
+            alt="Avatar Photo"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <div class="profile__text">
+              <h1 class="profile__name">Jacques Cousteau</h1>
+              <img
+                src="./images/edit-button.png"
+                alt="Botão de edição de conteúdo"
+                class="profile__edit-button"
+              />
+            </div>
+            <p class="profile__job">Explorador</p>
+          </div>
+          <button type="button" class="profile__add-button">
+            <img
+              src="./images/add-content.png"
+              alt="Botão de adicionar conteúdo "
+              class="profile__add-button-icon"
+            />
+          </button>
+        </section>
+        <section class="elements">
+          <div class="element">
+            <img
+              src="./images/yosemite.png"
+              alt="Paisagem de Vale de Yosemite"
+              class="element__image"
+            />
+            <div class="element__description">
+              <p class="element__title">
+                Vale de Yosemite
+              </p>
+              <img
+                src="./images/curtida.png"
+                alt="Icone de Curtida"
+                class="element__icon"
+              />
+              <img
+                src="./images/curtida_preto.png"
+                alt="Icone de Curtida Negro"
+                class="element__dark-icon"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/louise.png"
+              alt="Paisagem de Lago Louise"
+              class="element__image"
+            />
+            <div class="element__description">
+              Lago Louise
+              <img
+                src="./images/curtida.png"
+                alt="Icone de Curtida"
+                class="element__icon"
+              />
+              <img
+                src="./images/curtida_preto.png"
+                alt="Icone de Curtida Negro"
+                class="element__dark-icon"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/montanhas.png"
+              alt="Paisagem de Montanhas Care..."
+              class="element__image"
+            />
+            <div class="element__description">
+              Montanhas Care...
+              <img
+                src="./images/curtida.png"
+                alt="Icone de Curtida"
+                class="element__icon"
+              />
+              <img
+                src="./images/curtida_preto.png"
+                alt="Icone de Curtida Negro"
+                class="element__dark-icon"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/latemar.png"
+              alt="Paisagem de Latemar"
+              class="element__image"
+            />
+            <div class="element__description">
+              Latemar
+              <img
+                src="./images/curtida.png"
+                alt="Icone de Curtida"
+                class="element__icon"
+              />
+              <img
+                src="./images/curtida_preto.png"
+                alt="Icone de Curtida Negro"
+                class="element__dark-icon"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/vanoise.png"
+              alt="Paisagem de Vanoise Nationa..."
+              class="element__image"
+            />
+            <div class="element__description">
+              Vanoise Nationa...
+              <img
+                src="./images/curtida.png"
+                alt="Icone de Curtida"
+                class="element__icon"
+              />
+              <img
+                src="./images/curtida_preto.png"
+                alt="Icone de Curtida Negro"
+                class="element__dark-icon"
+              />
+            </div>
+          </div>
+          <div class="element">
+            <img
+              src="./images/braies.png"
+              alt="Paisagem do Lago di Braies"
+              class="element__image"
+            />
+            <div class="element__description">
+              Lago di Braies
+              <img
+                src="./images/curtida.png"
+                alt="Icone de Curtida"
+                class="element__icon"
+              />
+              <img
+                src="./images/curtida_preto.png"
+                alt="Icone de Curtida Negro"
+                class="element__dark-icon"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="popup">
+          <form class="popup__container">
+            <legend class="popup__container__title">Editar perfil</legend>
+
+            <fieldset class="popup__container__fieldset">
+              <input
+                type="text"
+                class="popup__container__input"
+                id="name"
+                placeholder="Jacques Costeau"
+              />
+              <input
+                type="text"
+                class="popup__container__input"
+                id="job"
+                placeholder="Explorador"
+              />
+            </fieldset>
+
+            <button class="popup__container__button" type="submit">
+              Salvar
+            </button>
+
+            <button class="popup__container__close-button">
+              <img
+                src="./images/close-icon.png"
+                alt="close icon"
+                class="popup__container__close-button-icon"
+              />
+            </button>
+          </form>
+        </section>
+      </main>
+      <footer class="footer">&copy; 2021 Around The U.S.</footer>
+    </div>
+
+    <script src="./scripts/b.js"></script>
+  </body>
+</html>
