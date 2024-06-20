@@ -6,25 +6,25 @@ let formElement = document.querySelector(".popup__container");
 
 
 function openPopupEdit() {
-  let popup = document.querySelector(".popup__edit-button");
+  let popup = document.querySelector(".popup__edit_button");
 
   popup.classList.add("popup__opened");
 }
 
 function closePopupEdit() {
-  let popup = document.querySelector(".popup__edit-button");
+  let popup = document.querySelector(".popup__edit_button");
 
   popup.classList.remove("popup__opened");
 }
 
 function openPopupAdd() {
-  let popup = document.querySelector(".popup__add-card");
+  let popup = document.querySelector(".popup__add_card");
 
   popup.classList.add("popup__opened");
 }
 
 function closePopupAdd() {
-  let popup = document.querySelector(".popup__add-card");
+  let popup = document.querySelector(".popup__add_card");
 
   popup.classList.remove("popup__opened");
 }
@@ -174,8 +174,8 @@ const popupTitle = document.querySelector(".popup__view-image-title");
 
 
 function openPopupImage(link, name) {
-  let popup = document.querySelector(".popup__view-image");
-  
+  let popup = document.querySelector(".popup__view_image");
+
   popupImage.src = link
   popupImage.alt = name
   popupTitle.textContent = name
@@ -184,7 +184,7 @@ function openPopupImage(link, name) {
 }
 
 function closePopupImage() {
-  let popup = document.querySelector(".popup__view-image");
+  let popup = document.querySelector(".popup__view_image");
 
   popup.classList.remove("popup__opened");
 }
