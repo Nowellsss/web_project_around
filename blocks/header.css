@@ -1,6 +1,7 @@
 .header {
   border: 1px solid #000000;
   border-bottom: 1px solid #545454;
+  width: 882px;
 }
 
 .header__logo {

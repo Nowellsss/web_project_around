@@ -3,6 +3,7 @@
   background-color: #000000;
   max-width: 1280px;
   font-family: "Inter", sans-serif;
+  margin: 0;
   padding: 0 200px;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -10,6 +11,10 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+}
+
+.content{
+  width: 882px;
 }
 
 @media screen and (max-width: 880px) {
@@ -22,4 +27,8 @@
   .page {
     padding: 0;
   }
+}
+
+.content{
+  width: 882px;
 }
