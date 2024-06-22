@@ -1,8 +1,8 @@
-let editButton = document.querySelector(".profile__edit-button");
-let addButton = document.querySelector(".profile__add-button");
-let closeEditButton = document.querySelector(".popup__container-close-button-edit");
-let closeAddButton = document.querySelector(".popup__container-close-button-add");
-let formElement = document.querySelector(".popup__container");
+const editButton = document.querySelector(".profile__edit-button");
+const addButton = document.querySelector(".profile__add-button");
+const closeEditButton = document.querySelector(".popup__container-close-button-edit");
+const closeAddButton = document.querySelector(".popup__container-close-button-add");
+const formElement = document.querySelector(".popup__container");
 
 
 function openPopupEdit() {
