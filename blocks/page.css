@@ -11,7 +11,7 @@
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
-  text-overflow: ellipsis
+  text-overflow: ellipsis;
 }
 
 .content{
