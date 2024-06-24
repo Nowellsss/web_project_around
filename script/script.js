@@ -82,39 +82,53 @@ const initialCards = [
 
 
 function createCard(card) {
-//Pegar o template
-const cardTemplate = document.querySelector("#card-template").content.querySelector(".element");
+  //Pegar o template
 
-//Fazer uma cópia
-const cardCopy = cardTemplate.cloneNode(true);
+  const cardTemplate = document
+    .querySelector("#card-template")
+    .content.querySelector(".element");
 
-//Pegar os sub elementos da cópia
-const cardImage = cardCopy.querySelector(".element__image");
-const cardTitle = cardCopy.querySelector(".element__title");
-const cardLike = cardCopy.querySelector(".element__like");
-const cardDislike = cardCopy.querySelector(".element__dislike");
-const cardTrash = cardCopy.querySelector(".element__delete-button");
+  //Fazer uma cópia
 
-cardTrash.addEventListener("click", deleteButton);
+  const cardCopy = cardTemplate.cloneNode(true);
 
-cardLike.addEventListener("click", likeButton);
-cardDislike.addEventListener("click", dislikeButton);
+  //Pegar os sub elementos da cópia
 
-cardImage.addEventListener("click", () => openPopupImage(card.link, card.name));
+  const cardImage = cardCopy.querySelector(".element__image");
 
-//Popular a cópia com os dados do cartão
+  const cardTitle = cardCopy.querySelector(".element__title");
 
-cardImage.src = card.link;
-cardImage.alt = card.name;
-cardTitle.textContent = card.name;
+  const cardLike = cardCopy.querySelector(".element__like");
 
-//Pegar a lista de cartões 
+  const cardDislike = cardCopy.querySelector(".element__dislike");
 
-const cardList = document.querySelector(".elements");
+  const cardTrash = cardCopy.querySelector(".element__delete-button");
 
-//Adicionar a cópia na lista de cartões
+  cardTrash.addEventListener("click", deleteButton);
 
-cardList.prepend(cardCopy);
+  cardLike.addEventListener("click", likeButton);
+
+  cardDislike.addEventListener("click", dislikeButton);
+
+  cardImage.addEventListener("click", () =>
+    openPopupImage(card.link, card.name)
+  );
+
+  //Popular a cópia com os dados do cartão
+
+  cardImage.src = card.link;
+
+  cardImage.alt = card.name;
+
+  cardTitle.textContent = card.name;
+
+  //Pegar a lista de cartões
+
+  const cardList = document.querySelector(".elements");
+
+  //Adicionar a cópia na lista de cartões
+
+  cardList.prepend(cardCopy);
 }
 
 
@@ -145,7 +159,7 @@ closePopupAdd();
 
 // Botão de remover
 function deleteButton(evt) {
-evt.target.closest(".element").remove()
+  evt.target.closest(".element").remove()
 }
 
 

@@ -1,4 +1,6 @@
 .footer {
+  display: flex;
+  flex-direction: row;
   padding: 4.188% 0 3.75%;
   color: #545454;
   font-size: 1.125rem;
