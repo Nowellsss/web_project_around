@@ -10,7 +10,7 @@
   background-color: #ffffff;
   border-radius: 10px;
   top: 23%;
-  left: 33%;
+  left: 38%;
 }
 
 .popup__button-closed {
@@ -107,14 +107,14 @@
 
 @media screen and (max-width: 880px) {
   .popup__form {
-    top: 18%;
+    top: 200px;
     left: 27%;
   }
 }
 
 @media screen and (max-width: 660px) {
   .popup__form {
-    top: 19%;
+    top: 200px;
     left: 20%;
   }
 
@@ -127,7 +127,7 @@
 @media screen and (max-width: 550px) {
   .popup__form {
     max-width: 282px;
-    top: 20%;
+    top: 200px;
     left: 22%;
   }
 
@@ -142,7 +142,7 @@
 
 @media screen and (max-width: 430px) {
   .popup__form {
-    top: 20%;
+    top: 200px;
     left: 6%;
   }
 
