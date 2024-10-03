@@ -105,17 +105,19 @@
   border-bottom: 1px solid red;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 1050px) {
   .popup__form {
     top: 200px;
-    left: 27%;
+    left: 25%;
+    right: 25%;
   }
 }
 
 @media screen and (max-width: 660px) {
   .popup__form {
     top: 200px;
-    left: 20%;
+    left: 16%;
+    right: 16%;
   }
 
   .popup__button-closed {
@@ -129,6 +131,7 @@
     max-width: 282px;
     top: 200px;
     left: 22%;
+    right: 22%;
   }
 
   .popup__name {
@@ -144,6 +147,7 @@
   .popup__form {
     top: 200px;
     left: 6%;
+    right: 6%;
   }
 
   .popup__button-closed {
