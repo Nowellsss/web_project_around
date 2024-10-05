@@ -42,7 +42,6 @@
             class="profile__add-button"
           />
         </section>
-
         <section class="elements"></section>
         <template class="template-card">
           <article class="elements__card">
@@ -62,15 +61,16 @@
             </div>
           </article>
         </template>
-        <div class="popup">
+        <div class="popup" id="popup-profile">
           <div class="popup__overlay"></div>
-          <form class="popup__form">
+          <div class="popup__content">
             <img
               src="./images/Close-icon.svg"
               alt="Botão Fechar"
               class="popup__button-closed"
             />
             <h3 class="popup__header">Editar perfil</h3>
+            <form class="popup__form">
             <input
               type="text"
               id="input-name"
@@ -101,20 +101,22 @@
               Salvar
             </button>
           </form>
+          </div>
         </div>
         <div class="popup" id="popup-card">
           <div class="popup__overlay"></div>
-          <form class="popup__card-form popup__form">
+          <div class="popup__content">
             <img
               src="./images/Close-icon.svg"
               alt="Botão Fechar"
-              class="popup__card-button-closed"
+              class="popup__button-closed"
             />
-            <h3 class="popup__card-header">Novo Local</h3>
+            <h3 class="popup__header">Novo Local</h3>
+            <form class="popup__form">
             <input
               type="text"
               id="input-title"
-              class="popup__card-title popup__input"
+              class="popup__name popup__input"
               value=""
               minlength="2"
               maxlength="30"
@@ -126,7 +128,7 @@
             <input
               type="url"
               id="input-url"
-              class="popup__card-url popup__input"
+              class="popup__description popup__input"
               value=""
               minlength="2"
               placeholder="Link da imagem"
@@ -136,11 +138,12 @@
 
             <button
               type="submit"
-              class="popup__card-button-create popup__button"
+              class="popup__button-create popup__button"
             >
              Salvar
             </button>
           </form>
+          </div>
         </div>
         <div class="popup" id="popup-image">
           <div class="popup__overlay"></div>

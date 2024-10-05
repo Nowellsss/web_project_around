@@ -1,6 +1,6 @@
 const editButton = document.querySelector(".profile__edit-button");
-const miPopup = document.querySelector(".popup");
-const closeButton = document.querySelector(".popup__button-closed");
+const miPopup = document.querySelector("#popup-profile");
+const closeButton = miPopup.querySelector(".popup__button-closed");
 const nameInput = document.querySelector(".popup__name");
 const jobInput = document.querySelector(".popup__description");
 const saveButton = document.querySelector(".popup__button-create");
@@ -11,10 +11,10 @@ const cardZone = document.querySelector(".elements");
 const contenido = template.content;
 const buttonAddCard = document.querySelector(".profile__add-button");
 const cardPopup = document.querySelector("#popup-card");
-const formCardPopup = document.querySelector(".popup__card-form");
-const inputCardTitle = document.querySelector(".popup__card-title");
-const inputUrl = document.querySelector(".popup__card-url");
-const buttonCloseAddCard = document.querySelector(".popup__card-button-closed");
+const buttonCloseAddCard = cardPopup.querySelector(".popup__button-closed");
+const formCardPopup = document.querySelector(".popup__form");
+const inputCardTitle = document.querySelector(".popup__title");
+const inputUrl = document.querySelector(".popup__description");
 const popupImage = document.querySelector("#popup-image");
 const buttonClosePopupImage = document.querySelector(
   ".popup__image-button-closed"
@@ -65,6 +65,8 @@ buttonCloseAddCard.addEventListener("click", () => {
   closePopup(cardPopup);
 });
 
+
+
 function openPopup(popup) {
   popup.classList.add("popup__open");
   document.addEventListener("keydown", handleEscapeKey);
@@ -73,7 +75,7 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove("popup__open");
   if (document.querySelectorAll(".popup__open").length === 0) {
-    document.removeEventListener("keydown", handleEscapeKey);
+   document.removeEventListener("keydown", handleEscapeKey);
   }
 }
 
@@ -88,7 +90,7 @@ function saveChanges() {
   profileText.textContent = nameInput.value;
   profileProfession.textContent = jobInput.value;
 
-  closePopup(miPopup);
+ closePopup(miPopup);
 }
 
 function cardAdd(name, link) {
@@ -121,6 +123,7 @@ function cardAdd(name, link) {
   cardTitle.textContent = name;
   cardImage.alt = name;
   return card;
+
 }
 
 initialCards.forEach(function (element) {
@@ -134,7 +137,7 @@ formCardPopup.addEventListener("submit", function (evt) {
   const cardToAdd = cardAdd(inputCardTitle.value, inputUrl.value);
   cardZone.prepend(cardToAdd);
 
-  closePopup(cardPopup);
+  closePopUp(cardPopup);
 });
 
 buttonClosePopupImage.addEventListener("click", () => {
