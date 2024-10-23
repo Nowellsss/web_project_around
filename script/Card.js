@@ -1,3 +1,5 @@
+import {openPopup, popupImage} from "./utils.js";
+
 export default class Card {
   constructor(cardData, template){
     this._cardData = cardData;
@@ -20,7 +22,7 @@ export default class Card {
       buttonLike.classList.toggle("elements__image-like_active");
     });
 
-    cardImage.addEventListener("click", function () {
+    cardImage.addEventListener("click",() => {
       openPopup(popupImage);
       const popupPhoto = popupImage.querySelector(".popup__image-photo");
       const popupTitle = popupImage.querySelector(".popup__image-name");
