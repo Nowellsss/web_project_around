@@ -1,12 +1,12 @@
-import { openPopup, closePopup, cardPopup } from "./utils.js";
+import { closePopup, cardPopup, miPopup } from "./utils.js";
 import Card from "./Card.js";
 import FormValidator from "./FormValidator.js";
 
 const cardZone = document.querySelector(".elements");
 const formProfilePopup = document.querySelector("#popup-profile").querySelector(".popup__form");
 const formCardPopup = document.querySelector("#popup-card").querySelector(".popup__form");
-const inputCardTitle = document.querySelector(".popup__name");
-const inputUrl = document.querySelector(".popup__description");
+const inputCardTitle = document.querySelector(".popup__location");
+const inputUrl = document.querySelector(".popup__url");
 
 
 const initialCards = [
@@ -45,6 +45,7 @@ initialCards.forEach(function (cardData) {
   cardZone.append(newCard);
 });
 
+
 const config = {
     formSelector: ".popup__form",
     inputSelector: ".popup__input",
@@ -57,11 +58,11 @@ const config = {
 const formvalidatorcard = new FormValidator(config, formCardPopup)
   formvalidatorcard.enableValidation()
 
-const formvalidatorprofile = new FormValidator(config, formProfilePopup)
+const formvalidatorprofile = new FormValidator(config,formProfilePopup)
   formvalidatorprofile.enableValidation()
 
 
-  formCardPopup.addEventListener("submit", function (evt) {
+formCardPopup.addEventListener("submit", function (evt) {
     evt.preventDefault();
 
     const cardData = {name:inputCardTitle.value, link:inputUrl.value}
@@ -75,5 +76,12 @@ const formvalidatorprofile = new FormValidator(config, formProfilePopup)
 
     closePopup(cardPopup);
   });
+
+formProfilePopup.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+
+    closePopup(miPopup);
+  });
+
 
 

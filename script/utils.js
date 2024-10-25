@@ -1,6 +1,6 @@
 export const popupImage = document.querySelector("#popup-image");
 export const cardPopup = document.querySelector("#popup-card");
-const miPopup = document.querySelector("#popup-profile");
+export const miPopup = document.querySelector("#popup-profile");
 const buttonClosePopupImage = document.querySelector(".popup__image-button-closed");
 const buttonCloseAddCard = cardPopup.querySelector(".popup__button-closed");
 const buttonAddCard = document.querySelector(".profile__add-button");
@@ -50,7 +50,7 @@ function handleEscapeKey(evt) {
   }
 }
 
-function saveChanges() {
+export function saveChanges() {
   profileText.textContent = nameInput.value;
   profileProfession.textContent = jobInput.value;
 
