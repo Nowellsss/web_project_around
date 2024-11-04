@@ -1,6 +1,10 @@
-import { closePopup, cardPopup, miPopup } from "./utils.js";
-import Card from "./Card.js";
-import FormValidator from "./FormValidator.js";
+import { closePopup, cardPopup, miPopup } from "../components/utils.js";
+import Card from "../components/Card.js";
+import FormValidator from "../components/FormValidator.js";
+import Section from "../components/Section.js";
+import PopupWithImage from "../components/popupWithImage.js";
+import PopupWithForm from "../components/popupWithForm.js";
+import UserInfo from "../components/userInfo.js";
 
 const cardZone = document.querySelector(".elements");
 const formProfilePopup = document.querySelector("#popup-profile").querySelector(".popup__form");
@@ -46,6 +50,7 @@ initialCards.forEach(function (cardData) {
 });
 
 
+
 const config = {
     formSelector: ".popup__form",
     inputSelector: ".popup__input",
@@ -84,4 +89,26 @@ formProfilePopup.addEventListener("submit", function (evt) {
   });
 
 
+const section = new Section(
+    { items: initialCards, renderer: renderCard },
+    ".elements"
+  );
+  section.renderItems();
+
+  const imagePopup = new PopupWithImage("#popup-image");
+imagePopup.setEventListeners();
+
+// Popup Novo Local - para add imagens
+const newImgPopup = new PopupWithForm(".new-img", (formData) => {
+  const newCard = renderCard({ name: formData.title, link: formData.url });
+  imgSection.addItem(newCard);
+  newImgPopup.close();
+});
+newImgPopup.setEventListeners();
+
+// Add evento ao btn para abrir o popup de add img
+document.querySelector(".profile__add-button").addEventListener("click", () => {
+  newImgPopup.open();
+  newImgFormValidator.resetValidation();
+});
 
