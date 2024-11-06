@@ -1,9 +1,8 @@
-import {openPopup, popupImage} from "./utils.js";
-
 export default class Card {
-  constructor(cardData, template){
+  constructor(cardData, template, handleCardClick){
     this._cardData = cardData;
     this._template = document.querySelector(template);
+    this._handleCardClick = handleCardClick;
   }
 
   cardAdd() {
@@ -23,7 +22,7 @@ export default class Card {
     });
 
     cardImage.addEventListener("click",() => {
-      openPopup(popupImage);
+      this._handleCardClick(popupImage);
       const popupPhoto = popupImage.querySelector(".popup__image-photo");
       const popupTitle = popupImage.querySelector(".popup__image-name");
 

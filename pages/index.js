@@ -1,7 +1,7 @@
-import { closePopup, cardPopup, miPopup } from "../components/utils.js";
+import Section from "../components/Section.js";
 import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
-import Section from "../components/Section.js";
+import Popup from "../components/Popup.js"
 import PopupWithImage from "../components/popupWithImage.js";
 import PopupWithForm from "../components/popupWithForm.js";
 import UserInfo from "../components/userInfo.js";
@@ -40,16 +40,17 @@ const initialCards = [
   },
 ];
 
-initialCards.forEach(function (cardData) {
-  const card = new Card(
+const section = new Section(
+  { items: initialCards, renderer: function(cardData)
+    {const card = new Card(
     cardData,
     "#template"
   )
   const newCard = card.cardAdd();
-  cardZone.append(newCard);
-});
-
-
+  return newCard}},
+  ".elements"
+);
+section.renderItems();
 
 const config = {
     formSelector: ".popup__form",
@@ -82,6 +83,7 @@ formCardPopup.addEventListener("submit", function (evt) {
     closePopup(cardPopup);
   });
 
+
 formProfilePopup.addEventListener("submit", function (evt) {
     evt.preventDefault();
 
@@ -89,11 +91,8 @@ formProfilePopup.addEventListener("submit", function (evt) {
   });
 
 
-const section = new Section(
-    { items: initialCards, renderer: renderCard },
-    ".elements"
-  );
-  section.renderItems();
+
+
 
   const imagePopup = new PopupWithImage("#popup-image");
 imagePopup.setEventListeners();
@@ -111,4 +110,6 @@ document.querySelector(".profile__add-button").addEventListener("click", () => {
   newImgPopup.open();
   newImgFormValidator.resetValidation();
 });
+
+
 
