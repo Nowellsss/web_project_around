@@ -5,6 +5,10 @@
   transform: translate(-50%, -50%);
 }
 
+.popup__image-content:hover {
+  opacity: 100%;
+}
+
 .popup__image-button-closed {
   width: 40px;
   height: 40px;
