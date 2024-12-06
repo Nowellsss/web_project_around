@@ -100,6 +100,71 @@
   border-bottom: 1px solid red;
 }
 
+.popup__form-confirmation {
+  width: 430px;
+  height: 181px;
+}
+
+.popup__close-confirmation {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -30px;
+  left: 430px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.popup__button-confirmation {
+  display: flex;
+  justify-content: center;
+  margin: 38px auto 36px;
+  padding: 0;
+  width: 358px;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 1);
+  border: none;
+  line-height: 50px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.popup__form-edit-avatar {
+  width: 430px;
+  height: 272px;
+}
+
+.popup__close-edit-avatar {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: -30px;
+  left: 430px;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+.popup__form-input {
+  width: 358px;
+  margin: 44px 36px 0 36px;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid rgb(194, 192, 192);
+  box-sizing: border-box;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  text-align: left;
+}
+
+.popup__button-save-avatar {
+  margin: 30px 36px 36px 36px;
+}
 
 @media screen and (max-width: 544px) {
   .popup {

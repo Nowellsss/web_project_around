@@ -4,17 +4,10 @@ import FormValidator from "../components/FormValidator.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
 import UserInfo from "../components/userInfo.js";
+import api from "../components/Api.js";
+import PopupWithConfirmation from "../components/PopupWithConfirmation.js";
 
-const cardZone = document.querySelector(".elements");
-const formProfilePopup = document.querySelector("#popup-profile").querySelector(".popup__form");
-const formCardPopup = document.querySelector("#popup-card").querySelector(".popup__form");
-const inputCardTitle = document.querySelector(".popup__location");
-const inputUrl = document.querySelector(".popup__url");
-const miPopup = document.querySelector("#popup-profile");
-const cardPopup = document.querySelector("#popup-card");
-
-
-const initialCards = [
+/* const initialCards = [
   {
     name: "Vale de Yosemite",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg",
@@ -39,7 +32,7 @@ const initialCards = [
     name: "Lago di Braies",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg",
   },
-];
+]; */
 
 const config = {
   formSelector: ".popup__form",
@@ -53,6 +46,7 @@ const config = {
 const userInfo = new UserInfo({
   name: ".profile__text",
   about: ".profile__profession",
+  avatar: ".profile__image",
 });
 
 //Popup Novo Local - para add imagens
@@ -94,6 +88,9 @@ const section = new Section(
 section.renderItems();
 
 // Form Validator Class
+const formProfilePopup = document.querySelector("#popup-profile").querySelector(".popup__form");
+const formCardPopup = document.querySelector("#popup-card").querySelector(".popup__form");
+
 const formvalidatorcard = new FormValidator(config, formCardPopup)
   formvalidatorcard.enableValidation()
 
