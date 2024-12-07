@@ -34,21 +34,21 @@ export default class Card {
 
     this._likeButtonElement = this._element.querySelector(".elements__image-like");
     if (this._liked) {
-      this._likeButtonElement.setAttribute("src", "../images/like-dark.png");
+      this._likeButtonElement.setAttribute("src", "../src/images/like-dark.png");
     } else {
-      this._likeButtonElement.setAttribute("src", "../images/like.png");
+      this._likeButtonElement.setAttribute("src", "../src/images/like.png");
     }
 
 
     this._likeButtonElement.addEventListener("click", () => {
       if (
         this._likeButtonElement.getAttribute("src") ===
-        "../images/like-dark.png"
+        "../src/images/like-dark.png"
       ) {
         this._handleCardLike(this._cardData._id, true);
         return this._likeButtonElement.setAttribute(
           "src",
-          "../images/like.png"
+          "../src/images/like.png"
         );
       }
 
@@ -57,7 +57,7 @@ export default class Card {
       this._liked = !this._liked;
       return this._likeButtonElement.setAttribute(
         "src",
-        "../images/like-dark.png"
+        "../src/images/like-dark.png"
       );
     });
   }
