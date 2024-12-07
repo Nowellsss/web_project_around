@@ -16,7 +16,7 @@ export default class Card {
   }
 
   _getTemplate() {
-    const cardsTemplate = document.querySelector(this._templateCard);
+    const cardsTemplate = document.querySelector(this._template);
 
     const cardElement = cardsTemplate.content
       .querySelector(".elements__card")
@@ -34,21 +34,21 @@ export default class Card {
 
     this._likeButtonElement = this._element.querySelector(".elements__image-like");
     if (this._liked) {
-      this._likeButtonElement.setAttribute("src", "../src/images/like-dark.png");
+      this._likeButtonElement.setAttribute("src", "../images/like-dark.png");
     } else {
-      this._likeButtonElement.setAttribute("src", "../src/images/like.png");
+      this._likeButtonElement.setAttribute("src", "../images/like.png");
     }
 
 
     this._likeButtonElement.addEventListener("click", () => {
       if (
         this._likeButtonElement.getAttribute("src") ===
-        "../src/images/like-dark.png"
+        "../images/like-dark.png"
       ) {
         this._handleCardLike(this._cardData._id, true);
         return this._likeButtonElement.setAttribute(
           "src",
-          "../src/images/like.png"
+          "../images/like.png"
         );
       }
 
@@ -57,7 +57,7 @@ export default class Card {
       this._liked = !this._liked;
       return this._likeButtonElement.setAttribute(
         "src",
-        "../src/images/like-dark.png"
+        "../images/like-dark.png"
       );
     });
   }
@@ -74,7 +74,7 @@ export default class Card {
 
 
     trashCard.addEventListener("click", () => {
-      this._openDeleteConfirmation(this._element, this._cardData._id);
+      this._openConfirmation(this._element, this._cardData._id);
     });
   }
 

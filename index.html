@@ -20,11 +20,13 @@
       </header>
       <main class="content">
         <section class="profile">
+          <div class="profile__avatar">
           <img
-            src="./images/profile.jpg"
             alt="perfil"
             class="profile__image"
           />
+          <button class="profile__edit-avatar-button"></button>
+        </div>
           <div class="profile__info">
             <div class="profile__name">
               <p class="profile__text">Jacques Cousteau</p>
@@ -114,7 +116,7 @@
               class="popup__button-closed"
             />
             <h3 class="popup__header">Novo Local</h3>
-            <form class="popup__form">
+            <form class="popup__form popup__form-card">
             <input
               type="text"
               id="input-title"
@@ -155,7 +157,7 @@
             <img
               src="./images/Close-icon.svg"
               alt="Botão Fechar"
-              class="popup__button-closed "
+              class="popup__button-closed"
             />
             <img src="." alt="" class="popup__image-photo" />
             <p class="popup__image-name"></p>
@@ -167,7 +169,7 @@
             <img
               src="./images/Close-icon.svg"
               alt="Botão Fechar"
-              class="popup__close-confirmation"
+              class="popup__button-closed"
             />
             <form class="popup__form popup__form-confirmation">
               <h2 class="popup__title">Tem certeza?</h2>
@@ -177,7 +179,7 @@
             </form>
           </div>
         </div>
-        <div class="popup" id="popup-edit-avatar">
+        <div class="popup" id="popup-avatar">
           <div class="pop__overlay"></div>
           <div class="popup__content">
             <img
@@ -186,10 +188,10 @@
               class="popup__button-closed"
             />
             <form class="popup__form popup__form-edit-avatar">
-              <h2 class="popup__title">Alterar a foto do perfil</h2>
+              <h2 class="popup__header">Alterar a foto do perfil</h2>
               <input
                 type="url"
-                class="popup__form-input popup__input-avatar"
+                class="popup__input popup__input-avatar"
                 id="avatar-input"
                 name="avatar"
                 placeholder="Link da imagem"
@@ -199,10 +201,7 @@
                 id="avatar-input-error"
                 class="popup__message-input-error"
               ></span>
-              <button
-                type="submit"
-                class="popup__button-save popup__button-save-avatar"
-              >
+              <button type="submit" class="popup__button-create popup__button">
                 Salvar
               </button>
             </form>

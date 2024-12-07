@@ -4,7 +4,9 @@ export default class PopupWithConfirmation extends Popup {
   constructor(popupSelector, submitCallback, formSelector) {
     super(popupSelector);
     this._submitCallback = submitCallback;
+    this._popup = document.querySelector(popupSelector);
     this._form = this._popup.querySelector(formSelector);
+
   }
 
   open(card, cardId) {
