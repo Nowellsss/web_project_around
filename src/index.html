@@ -10,7 +10,7 @@
       <meta name="author" content="Jorge Mendes" />
       <meta name="keywords" content="Around The U.S." />
       <title>Around The U.S.</title>
-      <link rel="shortcut icon" href="favicon.ico" />
+      <link rel="shortcut icon" href="../favicon.ico" />
       <link rel="stylesheet" href="./pages/index.css" />
   </head>
   <body>
@@ -171,24 +171,26 @@
               alt="Botão Fechar"
               class="popup__button-closed"
             />
+            <h3 class="popup__header">Tem certeza?</h3>
             <form class="popup__form popup__form-confirmation">
-              <h2 class="popup__title">Tem certeza?</h2>
-              <button type="submit" class="popup__button-confirmation">
+            <button
+              type="submit"
+              class="popup__button-confirmation popup__button">
                 Sim
-              </button>
+            </button>
             </form>
           </div>
         </div>
         <div class="popup" id="popup-avatar">
-          <div class="pop__overlay"></div>
+          <div class="popup__overlay"></div>
           <div class="popup__content">
             <img
               src="./images/Close-icon.svg"
               alt="Botão Fechar"
               class="popup__button-closed"
             />
-            <form class="popup__form popup__form-edit-avatar">
-              <h2 class="popup__header">Alterar a foto do perfil</h2>
+            <h3 class="popup__header">Alterar a foto do perfil</h3>
+              <form class="popup__form popup__form-edit-avatar">
               <input
                 type="url"
                 class="popup__input popup__input-avatar"
@@ -201,7 +203,9 @@
                 id="avatar-input-error"
                 class="popup__message-input-error"
               ></span>
-              <button type="submit" class="popup__button-create popup__button">
+              <button
+              type="submit"
+              class="popup__button-create popup__button">
                 Salvar
               </button>
             </form>
