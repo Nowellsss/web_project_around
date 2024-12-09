@@ -12,7 +12,9 @@ A página da Around The U.S. é o decimo segundo projeto no programa de desenvol
 - Validação de formulários
 - Depuração em JavaScript
 - Introdução à Programação Orientada a Objetos 
-- Trabalho com API
+- Introdução ao Trabalho com API
+- Programação Assíncrona
+- Protótipos de Objeto
 
 
-https://nowellsss.github.io/web_project_around/
+https://nowellsss.github.io/web_project_around/src/index.html

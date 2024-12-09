@@ -3,7 +3,7 @@ import Card from "../components/Card.js";
 import FormValidator from "../components/FormValidator.js";
 import PopupWithImage from "../components/PopupWithImage.js";
 import PopupWithForm from "../components/PopupWithForm.js";
-import UserInfo from "../components/userInfo.js";
+import UserInfo from "../components/UserInfo.js";
 import api from "../components/Api.js";
 import PopupWithConfirmation from "../components/PopupWithConfirmation.js";
 
@@ -90,7 +90,7 @@ api.getAppInfo().then(([userData, cardData]) => {
   sectionNewCardElement.renderItems();
 });
 
-const buttonSaveAvatar = document.querySelector(".popup__button-save-avatar");
+// Popup para editar Perfil
 const buttonEditProfile = document.querySelector(".popup__button-create")
 
 const popupEditForm = new PopupWithForm(
@@ -110,6 +110,8 @@ const popupEditForm = new PopupWithForm(
 );
 popupEditForm.setEventListeners();
 
+// Popup para Editar Avatar
+const buttonSaveAvatar = document.querySelector(".popup__button-create");
 
 const popupEditAvatarForm = new PopupWithForm(
   "#popup-avatar",
@@ -122,7 +124,9 @@ const popupEditAvatarForm = new PopupWithForm(
     });
   },
 );
+popupEditAvatarForm.setEventListeners();
 
+// Função para Abrir Popup para Editar Avatar
 const buttonEditAvatar = document.querySelector(".profile__edit-avatar-button");
 
 buttonEditAvatar.addEventListener("click", function () {
@@ -131,7 +135,7 @@ buttonEditAvatar.addEventListener("click", function () {
 
 popupEditAvatarForm.setEventListeners();
 
-
+// Popup para Confirmar eliminação de Cartão
 const popupConfirmation = new PopupWithConfirmation(
   "#popup-confirmation",
   (card, cardId) => {
@@ -153,7 +157,7 @@ const popupWithImage = new PopupWithImage(
 
 popupWithImage.setEventListeners();
 
-
+// Popup de Cartão
 const popupCard = new PopupWithForm(
   "#popup-card",
   ({ name, link }) => {
@@ -182,9 +186,6 @@ const popupCard = new PopupWithForm(
 );
 
 popupCard.setEventListeners();
-
-
-
 
 
 // Form Validator Class
