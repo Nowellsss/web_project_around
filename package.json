@@ -11,8 +11,5 @@
     "url": "web_project_around"
   },
   "author": "Jorge Mendes",
-  "license": "ISC",
-  "dependencies": {
-    "jquery": "^3.7.1"
-  }
+  "license": "ISC"
 }
